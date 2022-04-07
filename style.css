@@ -59,10 +59,16 @@ table {
 html {
 	background-color: #333344;
 	color: #eeeeff;
+	text-justify: inter-word;
+	text-align: justify;
 }
 
 body,h1,h2,h3,h4,h5,h6 {
 	font-family: "Raleway", sans-serif;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+	margin: 0.5% 5%;
 }
 
 h1 {
@@ -88,6 +94,11 @@ h5 {
 
 h6 {
 	font-size: 0.5em;
+}
+
+footer {
+	background-color: #444455;
+	padding: 0 5%;
 }
 
 /* For centering certain object */
@@ -121,4 +132,30 @@ h6 {
 .topnav a:hover {
   background-color: #eeeeff;
   color: #444455;
+}
+
+html, body {
+	height: 100%;
+}
+
+/* Parallax scrolling thing for image */
+.parallax {
+	/* Image for parallax */
+	background-image: url("images/glitch-parmjot.png");
+
+	/* Relative height so that it doesn't cover the whole page, and so that it works on most devices */
+	height: 60%;
+
+	/* parallax effect thing  */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* If device has a small screen, disable effect */
+@media only screen and (max-device-width: 1366px) {
+  	.parallax {
+    	background-attachment: scroll;
+  	}
 }
