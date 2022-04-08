@@ -138,13 +138,19 @@ html, body {
 	height: 100%;
 }
 
+footer {
+	column-count: 2;
+	padding: 1em 5%;
+}
+
 /* Parallax scrolling thing for image */
 .parallax {
 	/* Image for parallax */
 	background-image: url("images/glitch-parmjot.png");
 
 	/* Relative height so that it doesn't cover the whole page, and so that it works on most devices */
-	height: 60%;
+	height: 40%;
+	margin: 2% 5%;
 
 	/* parallax effect thing  */
 	background-attachment: fixed;
