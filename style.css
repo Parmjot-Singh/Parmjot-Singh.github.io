@@ -63,11 +63,15 @@ html {
 	text-align: justify;
 }
 
+html, body {
+	height: 100%;
+}
+
 body,h1,h2,h3,h4,h5,h6 {
 	font-family: "Raleway", sans-serif;
 }
 
-p,h1,h2,h3,h4,h5,h6 {
+p,h1,h2,h3,h4,h5,h6,li {
 	margin: 0.5% 5%;
 }
 
@@ -89,18 +93,28 @@ h4 {
 }
 
 h5 {
-	font-size: 1em;
+	font-size: 1.3em;
 }
 
 h6 {
-	font-size: 0.5em;
+	font-size: 1.1em;
 }
 
 footer {
 	background-color: #444455;
-	padding: 0 5%;
+	column-count: 2;
+	padding: 1em 5%;
 }
 
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: square;
+	display: list-item;
+	list-style-position: inside;
+}
 /* For centering certain object */
 
 .center-object {
@@ -114,33 +128,53 @@ footer {
 
 /* Navigation bar stuff */
 .topnav {
-  background-color: #444455;
-  overflow: hidden;
+	background-color: #444455;
+	overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #eeeeff;
-  text-align: center;
-  padding: 1.1em 1.1em;
-  text-decoration: none;
-  font-size: 1.2em;
+.nav-item {
+ 	float: left;
+ 	color: #eeeeff;
+ 	text-align: center;
+ 	padding: 1.1em 1.1em;
+ 	font-size: 1.2em;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #eeeeff;
-  color: #444455;
+.nav-item:hover {
+	background-color: #eeeeff;
+	color: #444455;
 }
 
-html, body {
-	height: 100%;
+.nav-left {
+	float: left;
 }
 
-footer {
-	column-count: 2;
-	padding: 1em 5%;
+.nav-right {
+	float: right;
+}
+
+.nav-item-github {
+ 	float: right;
+ 	color: #eeeeff;
+ 	text-align: center;
+ 	padding: 1.1em 1.1em;
+ 	font-size: 1.2em;
+}
+
+.nav-item-github:hover {
+	background-color: #eeeeff;
+	color: #444455;
+}
+
+/* This is all to change the image so it is visible on hover lmao */
+span.on-hover{
+	display:none;
+}
+.nav-item-github:hover span.no-hover{
+	display:none;
+}
+.nav-item-github:hover span.on-hover{
+	display:block;
 }
 
 /* Parallax scrolling thing for image */
