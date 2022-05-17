@@ -54,7 +54,11 @@ table {
 	border-spacing: 0;
 }
 
-/* Normal CSS starts here */
+/**/
+/**/
+/* Normal CSS */
+/**/
+/**/
 
 html {
 	background-color: #333344;
@@ -67,11 +71,11 @@ html, body {
 	height: 100%;
 }
 
-body,h1,h2,h3,h4,h5,h6 {
+body, h1, h2, h3, h4, h5, h6 {
 	font-family: "Raleway", sans-serif;
 }
 
-p,h1,h2,h3,h4,h5,h6,li {
+p, h1, h2, h3, h4, h5, h6, li {
 	margin: 0.5% 5%;
 }
 
@@ -104,6 +108,7 @@ footer {
 	background-color: #444455;
 	column-count: 2;
 	padding: 1em 5%;
+	position: absolute;
 }
 
 a {
@@ -115,6 +120,12 @@ li {
 	display: list-item;
 	list-style-position: inside;
 }
+
+/**/
+/**/
+/* Classes */
+/**/
+/**/
 /* For centering certain object */
 
 .center-object {
@@ -126,7 +137,36 @@ li {
 	text-align: center;
 }
 
+/* Animation on hover */
+
+.hover-animation {
+	display: inline-block;
+	position: relative;
+}
+
+.hover-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #eeeeff;
+  transform-origin: center;
+  transition: transform 0.1s ease-out;
+}
+
+.hover-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: top;
+}
+
 /* Navigation bar stuff */
+.nav-item a {
+	text-decoration: none;
+}
+
 .topnav {
 	background-color: #444455;
 	overflow: hidden;
@@ -139,63 +179,63 @@ li {
  	padding: 1.1em 1.1em;
  	font-size: 1.2em;
 }
-
-.nav-item:hover {
-	background-color: #eeeeff;
-	color: #444455;
-}
-
-.nav-left {
+.float-left {
 	float: left;
 }
 
-.nav-right {
+.float-right {
 	float: right;
 }
 
-.nav-item-github {
- 	float: right;
- 	color: #eeeeff;
- 	text-align: center;
- 	padding: 1.1em 1.1em;
- 	font-size: 1.2em;
+/* Link boxes */
+.link-box-container-left {
+	width: 42.5%;
+	display: block;
+	background-color: #444455;
+	margin: 0 2.5% 0 5%;
+	padding: 1em 5%;
 }
 
-.nav-item-github:hover {
-	background-color: #eeeeff;
-	color: #444455;
+.link-box-container-right {
+	width: 42.5%;
+	display: block;
+	background-color: #444455;
+	margin: 0 5% 0 2.5%;
+	padding: 1em 5%;
 }
 
-/* This is all to change the image so it is visible on hover lmao */
-span.on-hover{
-	display:none;
-}
-.nav-item-github:hover span.no-hover{
-	display:none;
-}
-.nav-item-github:hover span.on-hover{
-	display:block;
+.link-box {
+	width: 7em;
+	height: 10em;
+	display: inline-block;
+	background-color: #333344;
 }
 
-/* Parallax scrolling thing for image */
+.link-box a {
+	text-decoration: none;
+}
+
+/* This has been shelved for now, because it looks weird, and I can't find a good use case for it.
+Parallax scrolling thing for image
 .parallax {
-	/* Image for parallax */
+	Image for parallax
 	background-image: url("images/glitch-parmjot.png");
 
-	/* Relative height so that it doesn't cover the whole page, and so that it works on most devices */
+	Relative height so that it doesn't cover the whole page, and so that it works on most devices
 	height: 40%;
 	margin: 2% 5%;
 
-	/* parallax effect thing  */
+	parallax effect thing
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-/* If device has a small screen, disable effect */
+If device has a small screen, disable effect
 @media only screen and (max-device-width: 1366px) {
   	.parallax {
     	background-attachment: scroll;
   	}
 }
+*/
