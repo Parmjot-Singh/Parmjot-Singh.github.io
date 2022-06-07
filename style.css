@@ -54,4 +54,134 @@ table {
 	border-spacing: 0;
 }
 
+/* Import Fonts and set classes for Font Weights */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+.font-weight-light {
+	font-weight: 200;
+}
+
+.font-weight-bold {
+	font-weight: 700;
+}
 /* Normal CSS */
+
+html {
+	/* Pale Rainbow Gradient Background */
+	background-image:
+	linear-gradient(180deg,
+	rgb(250, 240, 240),
+	rgb(250, 245, 240),
+	rgb(250, 250, 240),
+	rgb(240, 250, 240),
+	rgb(240, 250, 250),
+	rgb(240, 240, 250),
+	rgb(250, 240, 250),
+	rgb(250, 240, 245),
+	rgb(250, 240, 240));
+	color: #111111;
+	font-family: 'Fira Sans', sans-serif;
+	/* Make all text go to the bounds of the container, unless specified otherwise */
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+a {
+	color: #111111;
+}
+
+body {
+	margin: 0 5%;
+	padding: 0 1%;
+	background-color: rgba(255, 255, 255, 0.5);
+	/* Shadow around main content */
+	box-shadow:
+	0 4px 8px 0 rgba(0, 0, 0, 0.2),
+	0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+/* Navbar stuff */
+nav {
+	margin-bottom: 10px;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	/* Shadow below Nav Bar */
+	box-shadow:
+	0 4px 8px 0 rgba(0, 0, 0, 0.2),
+	0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.active-page {
+	animation: Rainbow-Background 10s linear 1s infinite normal;
+	animation-fill-mode: backwards;
+}
+
+/* Rainbow Background animation */
+
+@keyframes Rainbow-Background {
+	0% {background-color: rgb(250, 200, 200);}
+	14.28% {background-color: rgb(250, 225, 200);}
+	28.57% {background-color: rgb(250, 250, 200);}
+	42.85% {background-color: rgb(200, 250, 200);}
+	57.14% {background-color: rgb(200, 250, 250);}
+	71.42% {background-color: rgb(200, 200, 250);}
+	85.71% {background-color: rgb(250, 200, 250);}
+	100% {background-color: rgb(250, 200, 225);}
+}
+
+/* Underline animation on Hover */
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+	color: #111111;
+}
+
+.hover-underline-animation:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #111111;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
