@@ -110,6 +110,7 @@ footer {
 a {
 	color: #111111;
 	text-decoration: none;
+	font-style: italic;
 }
 
 h1 {
@@ -127,6 +128,11 @@ h3 {
 
 h4 {
 	font-size: 120%;
+}
+
+h5 {
+	font-size: 90%;
+	font-weight: 200;
 }
 
 p {
@@ -154,10 +160,10 @@ hr {
 	margin: 0 0 5px;
 }
 
-.a-hr {
+.small-hr {
 	display: inline-block;
 }
-.a-hr:after {
+.small-hr:after {
 	content: '';
 	display: block;
 	animation: Rainbow-Background 10s linear 1s infinite normal;
@@ -186,6 +192,11 @@ header {
 nav {
 	margin-bottom: 10px;
 }
+
+nav a {
+	font-style: normal;
+}
+
 nav ul {
 	list-style-type: none;
 	margin: 0;
