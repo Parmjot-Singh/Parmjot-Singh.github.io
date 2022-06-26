@@ -220,6 +220,7 @@ nav ul {
 
 nav li {
 	float: left;
+	min-width: 10%;
 }
 
 nav li a {
