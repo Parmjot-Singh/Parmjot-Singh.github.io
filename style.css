@@ -68,6 +68,7 @@ table {
 /* Normal CSS */
 
 html {
+    height: 100%;
 	/* Pale Rainbow Gradient Background */
 	background-image:
 	linear-gradient(180deg,
@@ -89,6 +90,7 @@ html {
 
 body {
 	margin: 0 10%;
+    height: 100%;
 	padding: 0 5%;
 	padding-top: 150px;
 	margin-top: -110px;
@@ -178,7 +180,6 @@ hr {
 	margin: 0 0 5px;
 }
 
-
 header {
 	text-align: center;
 	font-weight: 200;
@@ -191,6 +192,18 @@ header {
 
 .float-right {
 	float: right;
+}
+
+.center-text {
+	text-align: center;
+}
+
+/* For 404 Page */
+
+.error-text {
+	font-weight: 300;
+	width: 100%;
+    text-align: center;
 }
 
 /* Navbar stuff */
