@@ -31,11 +31,8 @@ repository: Parmjot-Singh/parmjot-singh.github.io
 
 # Build settings
 #theme: minima
-#theme: slate
-#theme: jekyll-theme-midnight
-#theme: jekyll-theme-slate
-remote_theme: parmjot-singh/dusk
-#remote_theme: pages-themes/midnight@v0.2.0
+#theme: midnight
+remote_theme: "jeffreytse/jekyll-theme-yat"
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
